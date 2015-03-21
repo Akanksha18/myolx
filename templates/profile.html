@@ -1,4 +1,36 @@
 hello from profile
+
+<form action="/profile/" method="post">
+{% csrf_token %}
+
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
 <br/>
 Back to<a href="/loggedin/">  my account </a>
 <br/>
+<!-- <form action-"/profile/" method="POST">
+{% csrf_token %}
+
+{{form.as_p}}
+<input type="submit" value="Submit">
+
+
+<br/>
+Back to<a href="/loggedin/">  my account </a>
+<br/>
+
+
+<form action-"/register/" method="POST">
+{% csrf_token %}
+
+{{form.as_p}}
+<input type="submit" value="Submit">
+
+<br/>
+<a href="/"> Home </a>
+<br/>
+
+
+</form> -->

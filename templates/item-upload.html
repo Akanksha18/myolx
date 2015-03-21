@@ -1,0 +1,12 @@
+item upload page
+
+<form action="/item_upload/" method="post">
+{% csrf_token %}
+
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+<br/>
+Back to<a href="/loggedin/">  my account </a>
+<br/>

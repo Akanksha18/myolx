@@ -18,14 +18,24 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'userapp.views.logout'),
     url(r'^loggedin/$', 'userapp.views.loggedin'),
     url(r'^invalid/$', 'userapp.views.invalid_login'),
+   
+# loggedin users thank you page 
+    url(r'^thanks_user/$', 'userapp.views.thanks_user'),
   
 # profile uploads
     url(r'^hello-app/$', ProfileImageIndexView.as_view(), name= 'app'),
     url(r'^upload/$', ProfileImageView.as_view(), name = 'profile_image_upload'),
     url(r'^uploaded/(?P<pk>\d+)/$', ProfileDetailView.as_view(), name='profile_image'),
 
-# profile details add form
+# profile details add user profile form
     url(r'^profile/$', 'userapp.views.profile'),
+
+# item_detail to add upload form
+    url(r'^item/$', 'userapp.views.item'),
+
+# item_detail to add upload form
+    url(r'^item_upload/$', 'userapp.views.item_upload'),
+
 
     url(r'^admin/', include(admin.site.urls)),
 )
