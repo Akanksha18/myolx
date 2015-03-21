@@ -31,4 +31,4 @@ class ItemUploadForm(ModelForm):
     
     class Meta:
         model = ItemDetail
-        fields=['category','title','description','amount']
+        fields=['category','title','description','amount','item_image']

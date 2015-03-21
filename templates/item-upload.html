@@ -1,6 +1,6 @@
 item upload page
 
-<form action="/item_upload/" method="post">
+<form action="/item_upload/" method="post" enctype="multipart/form-data">
 {% csrf_token %}
 
 {{ form.as_p }}
@@ -9,4 +9,4 @@ item upload page
 
 <br/>
 Back to<a href="/loggedin/">  my account </a>
-<br/>
+<br/> 

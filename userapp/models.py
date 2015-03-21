@@ -67,6 +67,3 @@ class ItemUpload(models.Model):
 
     def __unicode__(self):
         return u"%s %s" % (self.title, self.category)
-
-# item upload is a copy of item detail made to ensure image upload
-# item_image = models.FileField(upload_to='admin/ItemDetail')

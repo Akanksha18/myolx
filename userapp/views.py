@@ -122,16 +122,11 @@ def item(request):
 def thanks_user(request):
     return render_to_response('thank-you-user.html')
 
-
-# class ProfileDetailView(DetailView):
-#     model = ProfileImage
-#     template_name = 'profile_image.html'
-#     context_object_name = 'image'
     
 def item_upload(request):
     if request.method == 'POST':
         item = ItemUpload(user=request.user)
-        form = ItemUploadForm(request.POST,instance=item)    
+        form = ItemUploadForm(request.POST,request.FILES, instance=item)    
         if form.is_valid():
             form.save()
  
@@ -140,7 +135,6 @@ def item_upload(request):
         form = ItemUploadForm()
         print form
     return render(request, 'item-upload.html', {'form' :form})  
-
 
 
 # def profile(request):
