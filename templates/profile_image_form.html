@@ -1,3 +1,7 @@
+{% extends 'index.html' %}
+{% block content %}
+<br/><br/>
+<br/><br/>
 Hello Profile image form
 <form action="{% url "profile_image_upload" %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -7,3 +11,4 @@ Hello Profile image form
 <br/>
 Back to<a href="/loggedin/">  my account </a>
 <br/>
+{% endblock %}

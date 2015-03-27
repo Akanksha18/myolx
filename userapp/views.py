@@ -10,6 +10,16 @@ from django.views.generic import FormView, DetailView, ListView
 from .models import ProfileImage, UserDetail, ItemDetail, ItemUpload
 from userapp.forms import UserForm, UploadFileForm, ProfileImageForm, UserDetailForm, ItemDetailForm, ItemUploadForm
 
+
+def index(request):
+    return render_to_response('index.html')
+
+def index1(request):
+    return render_to_response('index1.html')
+
+def index2(request):
+    return render_to_response('index2.html')
+
 def app(request):
     return render_to_response('app_hello.html')
 
@@ -136,6 +146,8 @@ def item_upload(request):
         print form
     return render(request, 'item-upload.html', {'form' :form})  
 
+def seek(request):
+    return render_to_response('seek.html')
 
 # def profile(request):
 #     if request.method == 'POST':

@@ -63,7 +63,7 @@ class ItemUpload(models.Model):
     title = models.CharField(max_length=50) 
     description = models.TextField(max_length=50)
     amount = models.IntegerField(max_length=10,unique=True)
-    item_image = models.FileField(upload_to='admin/ItemUpload')
+    item_image = models.FileField(upload_to='static/userimg')
 
     def __unicode__(self):
         return u"%s %s" % (self.title, self.category)

@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from models import UserDetail, ItemDetail, ItemUpload
 
+
 class UserForm(UserCreationForm):
     class Meta:
         model = User

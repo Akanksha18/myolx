@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>MYOLX</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/static/css/normalize.css">
+
+    <link rel="stylesheet" href="/static/css/style1.css">
+</head>
+
+<body background="/static/img/a.jpeg">
+
+  <div class="form">
+
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+
+          <form action="/" method="post">
+
+          <div class="top-row">
+         
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Name <span class="req">*</span>
+            </label>
+            <input type="name"required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          <button type="submit" class="button button-block"/>Get Started</button>
+
+          </form>
+          
+        </div>
+        
+
+         <div class="field-wrap">
+           </div>
+
+
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+
+          <form action="/auth/" method="post">
+
+            <div class="field-wrap">
+            <label for="username"> User Name </label>
+            <input type="text" name="username" value ="" id="username">
+            </div>
+
+            <div class="field-wrap">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" id="password">
+            </div>
+            
+            <input type="submit" value="login" />
+
+          </form>
+
+        </div>
+
+      </div><!-- tab-content -->
+
+</div> <!-- /form -->
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="/static/js/index.js"></script>
+
+</body>
+
+</html>

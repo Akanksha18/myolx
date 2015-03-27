@@ -9,7 +9,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'myolx.views.home', name='home'),
+    # url(r'^$', 'myolx.views.home', name='home'),
+    url(r'^$', 'userapp.views.index2'),
+    
     url(r'^myapp/$', 'userapp.views.app'),
     url(r'^register/$', 'userapp.views.register'),
     url(r'^thanks/$', 'userapp.views.thanks'),
@@ -18,6 +20,10 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'userapp.views.logout'),
     url(r'^loggedin/$', 'userapp.views.loggedin'),
     url(r'^invalid/$', 'userapp.views.invalid_login'),
+    
+
+
+    # url(r'^index/$', 'userapp.views.index'),
    
 # loggedin users thank you page 
     url(r'^thanks_user/$', 'userapp.views.thanks_user'),
@@ -36,6 +42,18 @@ urlpatterns = patterns('',
 # item_detail to add upload form
     url(r'^item_upload/$', 'userapp.views.item_upload'),
 
+# seek page
+    url(r'^seek/$', 'userapp.views.seek'),
 
+# index.html (changable)
+    url(r'^index/$', 'userapp.views.index'),
+
+
+# index1.html (changable)
+    url(r'^index1/$', 'userapp.views.index1'),
+
+# index2.html (changable) -- login and signup
+    url(r'^index2/$', 'userapp.views.index2'),
+    
     url(r'^admin/', include(admin.site.urls)),
 )
