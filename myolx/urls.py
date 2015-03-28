@@ -9,7 +9,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'myolx.views.home', name='home'),
+    # url(r'^$', 'myolx.views.home', name='home'),
+    url(r'^$', 'userapp.views.index2'),
     
     url(r'^myapp/$', 'userapp.views.app'),
     url(r'^register/$', 'userapp.views.register'),

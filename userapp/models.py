@@ -3,6 +3,8 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 
+# from django.db.models import Count
+# Members.objects.values('designation').annotate(dcount=Count('designation'))
 class ProfileImage(models.Model):
     image = models.FileField(upload_to='profile/%Y/%m/%d')
 
@@ -67,3 +69,10 @@ class ItemUpload(models.Model):
 
     def __unicode__(self):
         return u"%s %s" % (self.title, self.category)
+
+# query = Members.objects.all().query
+# query.group_by = ['category']
+# results = QuerySet(query=query, model=User)
+
+# from django.db.models import Count
+# Members.objects.values('designation').annotate(dcount=Count('designation'))
