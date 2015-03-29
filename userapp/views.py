@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 from django.views.generic import FormView, DetailView, ListView
 # from django.contrib.auth.decorators import login_required
 
-from .models import ProfileImage, UserDetail, ItemDetail, ItemUpload
+from .models import ProfileImage, UserDetail, ItemDetail, ItemUpload, User
 from userapp.forms import UserForm, UploadFileForm, ProfileImageForm, UserDetailForm, ItemDetailForm, ItemUploadForm
 
 
@@ -132,11 +132,14 @@ def item(request):
 def thanks_user(request):
     return render_to_response('thank-you-user.html')
 
+def get_category_users(category):
+    return User.objects.filter(item_detail__category=category)
+ 
     
 def item_upload(request):
     if request.method == 'POST':
         item = ItemUpload(user=request.user)
-        form = ItemUploadForm(request.POST,request.FILES, instance=item)    
+        form = ItemUploadForm(request.POST,request.FILES, instance=item)   
         if form.is_valid():
             form.save()
  
@@ -144,7 +147,10 @@ def item_upload(request):
     else:
         form = ItemUploadForm()
         print form
-    return render(request, 'item-upload.html', {'form' :form})  
+        # get the gadget users
+        gadget_users = get_category_users(ItemDetail.GADGET)
+    return render(request, 'item-upload.html', {'form' :form, 'gadget_users': gadget_users}) 
+
 
 def seek(request):
     return render_to_response('seek.html')
