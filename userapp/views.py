@@ -133,7 +133,7 @@ def thanks_user(request):
     return render_to_response('thank-you-user.html')
 
 def get_category_users(category):
-    return User.objects.filter(item_detail__category=category)
+    return User.objects.filter(itemdetail__category=category)
  
     
 def item_upload(request):

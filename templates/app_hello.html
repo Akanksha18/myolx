@@ -1,61 +1,6 @@
-<!-- 
-<div style="position: relative; left: 0; top: 0;">
-  <img src="/static/img/a.jpeg" style="position: relative; top: 0; left: 0;"/>
-  <img src="/static/img/b.jpeg" style="position: absolute; top: 30px; left: 70px;"/>
-</div>
-
-<style type="text/css"> 
-.containerdiv { float: left; position: relative; } 
-.cornerimage { position: absolute; top: 0; right: 0; } 
-</style>
-
-<div class="containerdiv">
-    <img border="0" src="http://www.gravatar.com/avatar/" alt="" width="100" height="100">
-    <img class="cornerimage" border="0" src="http://www.gravatar.com/avatar/" alt="" width="40" height="40">
-<div>
-
-<a href="destination_of_your_link"><img src="overlay.png" width="320" height="240" border="0" style="background:URL(http://img.ytimg.com/abcdefg/0.jpg) center center black;" /></a>
-<br/><br/><br/><br/><br/>
- -->
-<html>
-<head>
-<style>	html { 
-   width:100%; 
-   height:100%; 
-   /*background:url("/static/img/b.jpeg") center center no-repeat;*/
-}
-img {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 500px;
-   height: 500px;
-   margin-top: -250px; /* Half the height */
-   margin-left: -250px; /* Half the width */
-}
-html, body, #wrapper {
-   height:100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
-}
-#wrapper td {
-   vertical-align: middle;
-   text-align: center;
-}
-</style>
-</head>
-<body background="/static/img/b.jpg" >
-   <table id="wrapper">
-      <tr>
-         <td><img src="/static/img/a.jpeg" alt="" /></td>
-      </tr>
-   </table>
-</body>
-</html>
-
-<!-- Hello from app
-<br/>
-<a href="/"> Home </a>
-<br/> -->
+<h3>Gadget users</h3>
+<ul>
+    {% for user in gadget_users %}
+        <li>{{ user }}</li>
+    {% endfor %}
+</ul>

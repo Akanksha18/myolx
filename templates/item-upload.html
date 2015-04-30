@@ -15,5 +15,10 @@ item upload page
 <br/>
 Back to<a href="/loggedin/">  my account </a>
 <br/> 
-
+<h3>Gadget users</h3>
+<ul>
+    {% for user in gadget_users %}
+        <li>{{ user }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
